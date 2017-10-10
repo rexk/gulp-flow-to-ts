@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlowToJsonPlugin should convert React.Node to ReactNode 1`] = `
+"import * as React from 'react';
+
+export type MyElem = React.ReactNode;
+
+type Props = {
+  age: number;
+  icon: React.Node;
+};
+
+class MyNumber extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.age} {this.props.icon}
+      </div>
+    );
+  }
+}
+
+export default MyNumber;
+"
+`;
+
+exports[`FlowToJsonPlugin should convert import type statement 1`] = `
+"import { ComponentType } from 'react';
+
+export type MyComp = ComponentType;
+"
+`;
+
+exports[`FlowToJsonPlugin should convert mixed to any 1`] = `
+"function MixToAny(some: any): any {
+  return some;
+}
+
+export { MixToAny };
+"
+`;
+
+exports[`FlowToJsonPlugin should convert nullable 1`] = `
+"/**
+ * Nullable test
+ */
+function Nullable(something?: void | stirng): ?string {
+  return something;
+}
+
+export type P = {
+  name?: string;
+  ok?: void | boolean;
+  age?: void | number;
+}
+"
+`;
+
+exports[`FlowToJsonPlugin should convert to jsx 1`] = `
+"import React from 'react';
+
+class ReactComponent extends React.Component {
+  render() {
+    return <div>React Component</div>;
+  }
+}
+
+export default ReactComponent;
+"
+`;
+
+exports[`FlowToJsonPlugin should convert to ts 1`] = `
+"class Es6Class {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+export default Es6Class;
+"
+`;
+
+exports[`FlowToJsonPlugin should remove flow comment 1`] = `
+"import React from 'react';
+
+type Props = {
+  ok: string;
+};
+
+class BlockFlow extends React.Component<Props> {
+  render() {
+    return <div>{this.props.ok}</div>;
+  }
+}
+
+export default BlockFlow;
+"
+`;

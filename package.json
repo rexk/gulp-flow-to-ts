@@ -1,0 +1,36 @@
+{
+  "name": "gulp-flow-to-ts",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.4",
+    "@types/jest": "^21.1.2",
+    "@types/node": "^8.0.34",
+    "@types/through2": "^2.0.33",
+    "@types/vinyl-fs": "^2.4.7",
+    "gulp": "^3.9.1",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.4",
+    "ts-jest": "^21.1.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3",
+    "vinyl-fs": "^2.4.4"
+  }
+}
