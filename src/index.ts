@@ -88,10 +88,19 @@ function FlowToTsPlugin(): stream.Transform {
     const extname = TsExtname(content);
     const args: Array<ReplaceArgs> = [
       [
+        //
+        // example:
+        // type P = {
+        //   name: ?string
+        // }
         /(\w+): \?(\w+)/g,
         (match: string, $1: string, $2: string) => `${$1}?: void | ${$2}`
       ],
       [
+        // example:
+        // type P = {
+        //   name?: ?string
+        // }
         /(\w+)\?: \?(\w+)/g,
         (match: string, $1: string, $2: string) => `${$1}?: void | ${$2}`
       ],

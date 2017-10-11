@@ -1,6 +1,6 @@
 {
   "name": "gulp-flow-to-ts",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -38,5 +38,6 @@
     "tslint": "^5.7.0",
     "typescript": "^2.5.3",
     "vinyl-fs": "^2.4.4"
-  }
+  },
+  "dependencies": {}
 }
