@@ -14,7 +14,7 @@ type ReplaceArgs = [string | RegExp, string | Function];
  * @param {string} content
  * @return {string}
  */
-function TsExtname(content: string) {
+function TsExtname(content: string): string {
   return /from \'react\'/gi.test(content) ? '.tsx' : '.ts';
 }
 
